@@ -3,7 +3,7 @@ import db
 import os
 import sqlite3
 
-# Application Flask for Quiz App
+# Application Flask for Quiz App - Will add an index page
 
 # Initialize the Flask application
 app = Flask(__name__)
