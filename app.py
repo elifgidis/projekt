@@ -3,7 +3,7 @@ import db
 import os
 import sqlite3
 
-# Application Flask for Quiy App
+# Application Flask for Quiz App
 
 # Initialize the Flask application
 app = Flask(__name__)
