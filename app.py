@@ -3,6 +3,8 @@ import db
 import os
 import sqlite3
 
+# Application Flask for Quiy App
+
 # Initialize the Flask application
 app = Flask(__name__)
 
