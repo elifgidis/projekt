@@ -6,6 +6,9 @@ from wtforms import StringField,PasswordField,SubmitField
 from wtforms.validators import InputRequired,Length,ValidationError, DataRequired, EqualTo, Email
 from flask_bcrypt import Bcrypt
 import email_validator
+from quiz_qstns import *
+import re
+numeric_pattern = re.compile(r'\d+')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret-key-kk'
@@ -16,7 +19,7 @@ db = SQLAlchemy(app)
 bcyrpt = Bcrypt(app)
 
 class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True) # 
+    id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(20), nullable=False)
     last_name = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(30), unique=True, nullable=False)
@@ -66,7 +69,7 @@ def login():
         else:
             print('Invalid username or password')
             flash('Invalid username or password')
-    return render_template('login.html')
+    return render_template('base.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -79,8 +82,6 @@ def register():
     print('form check password:', form.confirm_password.data)
     if form.validate_on_submit():
         hashed_password = bcyrpt.generate_password_hash(form.password.data).decode('utf-8')
-        print('hashed_password :',hashed_password)
-        # new_user = User(email = form.username.data, password = hashed_password)
         new_user = User(
             first_name=form.first_name.data,
             last_name=form.last_name.data,
@@ -92,7 +93,7 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         flash('Registration successful! You can now log in.', 'success')
-        return redirect(url_for('login'))
+        return redirect(url_for('base'))
     else:
         print('Trying to commit to DB, form validation failed')
 
@@ -107,47 +108,7 @@ def dashboard():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('login'))
-
-topics_questions = {
-    'History': [
-        {'text': 'Which civilisation is the oldest in the world?', 'options': ['Egyptian', 'Mesopotamian', 'Indus', 'Chinese']},
-        {'text': 'Which word is an antonym for "Ancient"?', 'options': ['Old', 'Modern', 'Rare', 'Typical']},
-        {'text': 'What is the past tense of "Run"?', 'options': ['Ran', 'Running', 'Runed', 'Runs']}],
-    'Politics': [
-        {'text': 'What is the synonym of "Beautiful"?', 'options': ['Pretty', 'Ugly', 'Weak', 'Fast']},
-        {'text': 'Which word is an antonym for "Ancient"?', 'options': ['Old', 'Modern', 'Rare', 'Typical']},
-        {'text': 'What is the past tense of "Run"?', 'options': ['Ran', 'Running', 'Runed', 'Runs']}
-    ],
-    'English': [
-        {'text': 'What is the synonym of "Beautiful"?', 'options': ['Pretty', 'Ugly', 'Weak', 'Fast']},
-        {'text': 'Which word is an antonym for "Ancient"?', 'options': ['Old', 'Modern', 'Rare', 'Typical']},
-        {'text': 'What is the past tense of "Run"?', 'options': ['Ran', 'Running', 'Runed', 'Runs']}
-    ],
-   
-}
-
-quiz_data = {
-        'History': 
-        [
-        {"question": "What is the capital of France?",
-        "options": ["Berlin", "Madrid", "Paris", "Rome"],
-        "correct_answer": "Paris"},
-        {"question": "What is the capital of France?",
-        "options": ["Berlin", "Madrid", "Paris", "Rome"],
-        "correct_answer": "Paris"},
-        ],
-        'Politics': 
-        [
-        {"question": "Which planet is known as the Red Planet?",
-        "options": ["Mars", "Venus", "Jupiter", "Saturn"],
-        "correct_answer": "Mars"},
-        {"question": "What is the capital of France?",
-        "options": ["Berlin", "Madrid", "Paris", "Rome"],
-        "correct_answer": "Paris"},
-        ]
-    # Add more questions as needed
-}
+    return redirect(url_for('index'))
 
 @app.route('/select_topic', methods=['GET', 'POST'])
 def select_topic():
@@ -156,40 +117,15 @@ def select_topic():
         session['selected_topic'] = selected_topic
         return redirect(url_for('show_questions'))
     return render_template('topic.html', topics=quiz_data.keys())
-    # return render_template('topic.html', topics=topics_questions.keys())
-
-@app.route('/submit_topic', methods=['POST'])
-def submit_topic():
-    selected_topic = request.form.get('topic')
-    session['selected_topic'] = selected_topic
-    return redirect(url_for('show_questions'))
 
 @app.route('/show_questions')
 def show_questions():
     selected_topic = session.get('selected_topic')
     if not selected_topic:
         return redirect(url_for('select_topic'))
-    # questions = topics_questions.get(selected_topic, [])
     questions = quiz_data.get(selected_topic, [])
     print('questions show_qstns:', questions)
     return render_template('questions.html', topic=selected_topic, questions=questions)
-
-@app.route('/submit_quiz_', methods=['POST'])
-@login_required
-def submit_quiz_():
-    print('submit_quiz ', submit_quiz)
-    selected_topic = session.get('selected_topic')
-    print('selected_topic ', selected_topic)
-    if not selected_topic:
-        return redirect(url_for('select_topic'))
-
-    # questions = topics_questions.get(selected_topic, [])
-    questions = quiz_data.get(selected_topic, [])
-    print('questions ', questions)
-    submitted_answers = {q: request.form.get(f'question{idx}') for idx, q in enumerate(questions, start=1)}
-    print('Quiz submitted successfully!')
-    flash('Quiz submitted successfully!')
-    return redirect(url_for('index'))
 
 
 @app.route('/submit_quiz', methods=['POST'])
@@ -200,7 +136,6 @@ def submit_quiz():
         return redirect(url_for('select_topic'))
     questions = quiz_data.get(selected_topic, [])
     print('questions ', questions)
-    # submitted_answers = {q: request.form.get(f'question{idx}') for idx, q in enumerate(questions, start=1)}
     user_answers = request.form.to_dict()
     indexes = []
     for k in user_answers.keys():
@@ -219,12 +154,8 @@ def submit_quiz():
     print('user_answer:', user_answer)
     print('crctAnswers:', crctAnswers)
     score = calculate_score(user_answer, crctAnswers)
-    # Flash the score
     flash(f'Your score: {score} out of {len(quiz_data)}', 'success')
     return redirect(url_for('index'))
-
-import re
-numeric_pattern = re.compile(r'\d+')
 
 
 def calculate_score(user_answer, crctAnswers):
