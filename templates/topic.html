@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select Topic</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #8eb7e0;
+            color: #ffffff;
+            background-image: url('static/css/images/blue-psychedelic-paper-shapes.jpg');
+            background-color: #0c0d53;
+            background-size: cover;
+            color: #a98ab6;
+            height: 100vh;
+            margin: 0;
+        }
+        .select-topic-container {
+            background-color: #b7d3eb;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .select-topic-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .select-topic-form {
+            margin-top: 1rem;
+        }
+        .navbar-custom {
+            background-color: #1b166e;
+            padding: 0.5rem 1rem;
+        }
+        .navbar-custom a {
+            color: white;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="{{url_for('dashboard')}}">Quiz-ter</a>
+        <span class="navbar-text">
+           Elif Gidis,  {{ session['first_name'] }} {{ session['last_name'] }}
+        </span>
+        <a href="{{url_for('logout')}}"> Logout</a>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 select-topic-container">
+                <h2 class="select-topic-header">Select a Topic</h2>
+                <form method="POST" action="{{ url_for('select_topic') }}" class="select-topic-form">
+                    <div class="form-group">
+                        <label for="topic">Choose a topic:</label>
+                        <select name="topic" id="topic" class="form-control">
+                            {% for topic in topics %}
+                            <option value="{{ topic }}">{{ topic }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
