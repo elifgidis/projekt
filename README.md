@@ -10,27 +10,24 @@ pip install -r requirements.txt
 # Installing
 
 Clone the repository:
-```bash
+```
 git clone https://github.com/yourusername/yourprojectname.git
 ```
 
 Navigate to the project directory:
 ```
-bash
 cd yourprojectname
 ```
 
 Install the requirements:
 ```
-bash
 pip install -r requirements.txt
 ```
 
 Run the Flask application:
 ```
-bash
-export FLASK_APP=app.py  # On Windows use `set FLASK_APP=app.py`
-export FLASK_ENV=development  # On Windows use `set FLASK_ENV=development`
+export FLASK_APP=app.py  
+export FLASK_ENV=development  
 flask run
 ```
 
