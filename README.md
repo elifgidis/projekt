@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 Clone the repository:
 ```
-git clone https://github.com/yourusername/yourprojectname.git
+git clone [https://github.com/yourusername/yourprojectname.git](https://github.com/elifgidis/projekt.git)
 ```
 
 Navigate to the project directory:
