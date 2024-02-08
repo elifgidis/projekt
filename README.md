@@ -31,3 +31,16 @@ python app.py
 ```
 
 Visit http://127.0.0.1:8080/ in your web browser to view the application.
+
+#Website 
+![image](https://github.com/elifgidis/projekt/assets/154848427/d1b41133-bb26-44f0-bb1e-fa8067321a8b)
+![image](https://github.com/elifgidis/projekt/assets/154848427/44533ff9-0d7e-4a19-abcd-0694f5f29d7d)
+![image](https://github.com/elifgidis/projekt/assets/154848427/efabb914-1eeb-4397-b455-cea445a72070)
+![image](https://github.com/elifgidis/projekt/assets/154848427/534454ea-7124-40d4-9c0e-b34fdeb09330)
+![image](https://github.com/elifgidis/projekt/assets/154848427/523b935e-8bf3-42b2-a4da-739a3b84f7fb)
+![image](https://github.com/elifgidis/projekt/assets/154848427/38c16c21-581e-4e2c-b595-ed58d7924a65)
+
+
+
+
+
