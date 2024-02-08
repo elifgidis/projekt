@@ -11,7 +11,7 @@
 </details>
 
 ## [The problem]
-#a
+a
 
 ## [Our solution]
 
