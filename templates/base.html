@@ -92,17 +92,7 @@ The core of the page is divided into two main sections: a welcome message and a 
   </div>
 </div>
 
-{% with messages = get_flashed_messages(with_categories=true) %} <!-- Displaying flash messages on the screen -->
-  {% if messages %}
-    <div class="container mt-3">
-      {% for category, message in messages %}
-        <div class="alert alert-{{ category }}" role="alert">
-          {{ message }}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-{% endwith %}
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
