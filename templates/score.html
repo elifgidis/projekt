@@ -2,16 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- This page displays the Score of the Quiz for the particualr session. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Page</title>
-    <!-- Bootstrap CSS link -->
+   
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+           
+            background-image: url("{{ url_for('static', filename='css/images/sky.jpg') }}");
+            color: #a98ab6; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .container {
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+        }
+
+        h1 {
+            font-size: 3rem; 
+            color: #f9faf8;
+            margin-bottom: 3rem; 
+        }
+
+        .btn-container {
+            display: flex; 
+            flex-direction: row; 
+        }
+
+        .btn {
+            margin-top: 1rem; 
+            margin-right: 1rem; 
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container">
+        <!-- Displays the user's score -->
         <h1>Your Score: {{ score }}</h1>
-        <a href="{{ url_for('login') }}" class="btn btn-primary mt-3">Back to Login</a>
-        <a href="{{ url_for('select_topic') }}" class="btn btn-secondary mt-3">Select Topics</a>
+        <!-- Container for action buttons -->
+        <div class="btn-container">
+            <!-- Button to log out -->
+            <a href="{{ url_for('login') }}" class="btn btn-primary">Logout</a>
+            <!-- Button to select a new quiz topic -->
+            <a href="{{ url_for('select_topic') }}" class="btn btn-secondary">Select Topics</a>
+        </div>
     </div>
 </body>
 </html>
