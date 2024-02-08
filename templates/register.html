@@ -2,32 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- This page is dedicated to allowing new users to register for an application. 
+  The form captures information needed to create a new account,
+    including first and last names, email, and password.-->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> {% block title %}Register{% endblock %}</title>
+  <title> {% block title %}Register{% endblock %}</title> <!-- Dynamic title block -->
+  <!-- Bootstrap CSS for styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS for additional styling -->
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   <style>
     body {
-      background-color: #7575a1;
-      color: #ffffff;
-      background-image: url('static/css/images/space.jpg');
-      background-color: #0c0d53;
-      background-size: cover;
-      background-position: center;
-      color: #a98ab6;
+      background-color: #7575a1; 
+      color: #ffffff; 
+      background-image: url('static/css/images/base.jpg');
+      background-color: #0c0d53; 
+      background-size: cover; 
+      background-position: center; 
+      color: #ebe7ec;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      height: 100vh; 
+      margin: 0; 
     }
     .login-container {
-      max-width: 40%;
+      width: 60%; 
       padding: 2rem;
-      margin-left: auto;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-left: auto; 
+      background: rgba(255, 255, 255, 0.9); 
+      border-radius: 5px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    /* Ensure all form fields have a consistent width */
+    #first_name, #last_name, #email, #password, #confirm_password {
+      width: 100%;
     }
   </style>
 </head>
@@ -36,9 +46,10 @@
 {% block content %}
 <div class="row">
     <div class="col-md-6 offset-md-3">
-        <h2>Register</h2>
-        <form method="POST" action="{{ url_for('register') }}">
-          {{ form.hidden_tag() }}
+        <h2>Register</h2> <!-- Registration form heading -->
+        <form method="POST" action="{{ url_for('register') }}"> <!-- Form submission endpoint -->
+          {{ form.hidden_tag() }} <!-- CSRF protection or other hidden fields -->
+            <!-- Form fields for user input -->
             <div class="form-group">
                 <label for="first_name">First Name</label>
                 <input type="text" class="form-control" id="first_name" name="first_name" required>
@@ -59,8 +70,8 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-            <a href="{{ url_for('login') }}">Already have an account?</a>
+            <button type="submit" class="btn btn-primary">Register</button> <!-- Submission button -->
+            <a href="{{ url_for('login') }}">Already have an account?</a> <!-- Redirect Link to login page -->
         </form>
     </div>
 </div>
