@@ -4,7 +4,6 @@
 ```bash
 python3 -m venv venv      # On Windows use python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-pip install -r requirements.txt
 ```
 
 # Installing
@@ -17,6 +16,11 @@ git clone https://github.com/elifgidis/projekt.git
 Navigate to the project directory:
 ```
 cd projekt
+```
+Install the requirements:
+
+```
+pip install -r requirements.txt
 ```
 
 Run the Flask application:
