@@ -2,44 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- The Quiz App page displays a quiz with a series of multiple-choice questions.
+         Users can select answers for each question and submit their responses.
+         The user's score is displayed on the page. 
+       -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Quiz App</title> <!-- Page title -->
+    <!-- Bootstrap CSS for styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; 
             margin: 20px;
         }
 
         #quiz-container {
-            max-width: 800px;
+            max-width: 800px; 
             margin: auto;
         }
 
         .question {
-            margin-bottom: 20px;
+            margin-bottom: 20px; 
         }
 
         #result {
-            margin-top: 20px;
-            font-weight: bold;
+            margin-top: 20px; 
+            font-weight: bold; 
         }
     </style>
 </head>
 <body>
 
 <div id="quiz-container">
-    <h1 class="mt-3 mb-4 text-center">Quiz App</h1>
+    <h1 class="mt-3 mb-4 text-center">Quiz App</h1> <!-- Quiz title -->
 
     <div id="questions-container">
-        {% for index, question in enumerate(quiz_data) %}
-            <div class="question card p-3">
-                <p class="mb-3">{{ index + 1 }}. {{ question['question'] }}</p>
-                {% for option in question['options'] %}
+        {% for index, question in enumerate(quiz_data) %} <!-- Loops through each question -->
+            <div class="question card p-3"> <!-- Question card -->
+                <p class="mb-3">{{ index + 1 }}. {{ question['question'] }}</p> <!-- Displays question text -->
+                {% for option in question['options'] %} <!-- Loops through options for the current question -->
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q{{ index }}" id="q{{ index }}_option{{ loop.index }}" value="{{ option }}">
                         <label class="form-check-label" for="q{{ index }}_option{{ loop.index }}">
-                            {{ option }}
+                            {{ option }} <!-- Displays the answers -->
                         </label>
                     </div>
                 {% endfor %}
@@ -47,46 +52,15 @@
         {% endfor %}
     </div>
 
-    <button class="btn btn-primary" onclick="submitQuiz()">Submit</button>
+    <button class="btn btn-primary">Submit</button> <!-- Button to submit answers -->
 
-    <div id="result" class="mt-4"></div>
+    <div id="result" class="mt-4"></div> <!-- Container to display the result after submission -->
 </div>
 
+<!-- Bootstrap and jQuery for functionality -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-<script>
-    function submitQuiz() {
-        const answers = {};
-        const questions = document.querySelectorAll('.question');
-        questions.forEach((question, index) => {
-            const selectedOption = question.querySelector('input[name="q' + index + '"]:checked');
-            if (selectedOption) {
-                answers['q' + index] = selectedOption.value;
-            }
-        });
-
-        fetch('/submit_quiz', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams(answers),
-        })
-        .then(response => response.json())
-        .then(data => {
-            displayResult(data.score);
-        });
-    }
-
-    function displayResult(score) {
-        const resultContainer = document.getElementById("result");
-        resultContainer.innerHTML = `<div class="alert alert-info" role="alert">
-                                       Your score: ${score} out of {{ quiz_data|length }}
-                                     </div>`;
-    }
-</script>
 
 </body>
 </html>
