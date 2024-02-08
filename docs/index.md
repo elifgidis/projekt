@@ -8,27 +8,20 @@ nav_order: 0
 >
 > You may delete this `attention` box.
 
-# [Project Name]
+# [Quiz-ter]
 
-[Project description]
+[Quiz App Project]
 
 ## Team members
 
-### [Jane Dane]
+### [Elif Gidis]
 
 About
-: Some info about Jane
+: 23 Jahre alt und studiert Wirtschaftsinformatik an der HWR-Berlin
 
 Matr.-Nr.
-: 1234567
+: 77211914467
 
-### [Joe Doe]
-
-About
-: Some info about Joe
-
-Matr.-Nr.
-: 1234567
 
 ## Eidesstattliche Erklärung
 
