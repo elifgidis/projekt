@@ -1,15 +1,21 @@
+
+<!-- Interface to list the email addresses of all users stored in a database. 
+for debugging purposes currently to test if DB is actually storing info,
+ Each user's email is displayed as an item in an unordered list.-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Database</title>
+    <title>Check Database</title> <!-- Title  -->
 </head>
 <body>
-    <h1>Users in Database</h1>
+    <h1>Users in Database</h1> <!-- Heading indicating the purpose of the page -->
     <ul>
-        {% for user in users %}
-            <li>{{ user.email }}</li>
+        {% for user in users %} <!-- Loops through each user in the 'users' list variable -->
+            <li>{{ user.email }}</li> <!-- Displays the email of the current user in the loop -->
         {% endfor %}
     </ul>
 </body>
