@@ -1,3 +1,7 @@
+'''
+List of questions for each topics with correct answers to be compared for score calculation later.
+'''
+
 quiz_data = {
     'Science': [
         {"question": "What is the rarest blood type?",
@@ -320,7 +324,114 @@ quiz_data = {
     {"question": "Which sentence correctly uses 'to', 'too', and 'two'?",
      "options": ["A: I want too eat two pieces of cake, to.", "B: I want to eat too pieces of cake, too.", "C: I want to eat two pieces of cake, too.", "D: I want too eat to pieces of cake, two."],
      "correct_answer": "C: I want to eat two pieces of cake, too."}
+],'Technology': [
+    {"question": "Who is known as the father of computers?",
+     "options": ["A: Charles Babbage", "B: Alan Turing", "C: John Atanasoff", "D: Bill Gates"],
+     "correct_answer": "A: Charles Babbage"},
+    {"question": "What does 'HTTP' stand for?",
+     "options": ["A: HyperText Transfer Product", "B: HyperTransfer Text Protocol", "C: HyperText Transfer Protocol", "D: HyperTransfer Text Product"],
+     "correct_answer": "C: HyperText Transfer Protocol"},
+    {"question": "Which company developed the video game Fortnite?",
+     "options": ["A: Activision", "B: Epic Games", "C: Electronic Arts", "D: Ubisoft"],
+     "correct_answer": "B: Epic Games"},
+    {"question": "What is the name of the first successful personal computer?",
+     "options": ["A: IBM PC", "B: Apple Macintosh", "C: Commodore PET", "D: Apple II"],
+     "correct_answer": "D: Apple II"},
+    {"question": "In what year was the first iPhone released?",
+     "options": ["A: 2005", "B: 2007", "C: 2009", "D: 2006"],
+     "correct_answer": "B: 2007"},    {"question": "What does 'CPU' stand for?",
+     "options": ["A: Central Processing Unit", "B: Computer Personal Unit", "C: Central Personal Unit", "D: Central Processor Unit"],
+     "correct_answer": "A: Central Processing Unit"},
+    {"question": "Which language is primarily used for Android app development?",
+     "options": ["A: Java", "B: Swift", "C: Kotlin", "D: C#"],
+     "correct_answer": "C: Kotlin"},
+    {"question": "What is the name of the world's first computer programmer?",
+     "options": ["A: Charles Babbage", "B: Ada Lovelace", "C: Alan Turing", "D: Bill Gates"],
+     "correct_answer": "B: Ada Lovelace"},
+    {"question": "Which of these is not an operating system?",
+     "options": ["A: Linux", "B: MacOS", "C: Android", "D: Oracle"],
+     "correct_answer": "D: Oracle"},
+    {"question": "What year was the World Wide Web introduced to the public?",
+     "options": ["A: 1989", "B: 1991", "C: 1993", "D: 1995"],
+     "correct_answer": "B: 1991"},
+    {"question": "Which company invented the floppy disk?",
+     "options": ["A: IBM", "B: Microsoft", "C: Apple", "D: Sony"],
+     "correct_answer": "A: IBM"}
+
+],'Sports': [
+    {"question": "Which country hosted the 2016 Summer Olympics?",
+     "options": ["A: China", "B: Brazil", "C: United Kingdom", "D: Russia"],
+     "correct_answer": "B: Brazil"},
+    {"question": "Who holds the record for most goals in FIFA World Cup history?",
+     "options": ["A: Pele", "B: Miroslav Klose", "C: Ronaldo", "D: Lionel Messi"],
+     "correct_answer": "B: Miroslav Klose"},
+    {"question": "What sport is known as 'the sport of kings'?",
+     "options": ["A: Polo", "B: Horse Racing", "C: Fencing", "D: Archery"],
+     "correct_answer": "B: Horse Racing"},
+    {"question": "Which country won the first ever FIFA World Cup in 1930?",
+     "options": ["A: Uruguay", "B: Brazil", "C: Germany", "D: Argentina"],
+     "correct_answer": "A: Uruguay"},
+    {"question": "In tennis, what piece of fruit is found at the top of the men's Wimbledon trophy?",
+     "options": ["A: Apple", "B: Pineapple", "C: Strawberry", "D: Grape"],
+     "correct_answer": "B: Pineapple"},  
+    {"question": "How many players are on a soccer field for one team during a match?",
+     "options": ["A: 9", "B: 10", "C: 11", "D: 12"],
+     "correct_answer": "C: 11"},
+    {"question": "In golf, what name is given to a hole score of one under par?",
+     "options": ["A: Eagle", "B: Birdie", "C: Bogey", "D: Ace"],
+     "correct_answer": "B: Birdie"},
+    {"question": "Which country is traditionally known as the birthplace of sumo wrestling?",
+     "options": ["A: China", "B: Japan", "C: South Korea", "D: Mongolia"],
+     "correct_answer": "B: Japan"},
+    {"question": "Who is known as 'The Great One' in ice hockey?",
+     "options": ["A: Mario Lemieux", "B: Wayne Gretzky", "C: Sidney Crosby", "D: Alexander Ovechkin"],
+     "correct_answer": "B: Wayne Gretzky"},
+    {"question": "What sport is played at Wimbledon?",
+     "options": ["A: Cricket", "B: Tennis", "C: Golf", "D: Soccer"],
+     "correct_answer": "B: Tennis"},
+    {"question": "What is the only country to have played in every single soccer World Cup?",
+     "options": ["A: Brazil", "B: Germany", "C: Argentina", "D: Italy"],
+     "correct_answer": "A: Brazil"}
+
+     ], 'Art and Culture': [
+    {"question": "Who painted the Mona Lisa?",
+     "options": ["A: Vincent Van Gogh", "B: Leonardo da Vinci", "C: Michelangelo", "D: Raphael"],
+     "correct_answer": "B: Leonardo da Vinci"},
+    {"question": "Which city is known as the art capital of the world?",
+     "options": ["A: Paris", "B: New York", "C: London", "D: Florence"],
+     "correct_answer": "A: Paris"},
+    {"question": "What is the literary term for a play on words?",
+     "options": ["A: Metaphor", "B: Simile", "C: Pun", "D: Hyperbole"],
+     "correct_answer": "C: Pun"},
+    {"question": "In Greek mythology, who is the god of music, poetry, and the sun?",
+     "options": ["A: Zeus", "B: Apollo", "C: Hermes", "D: Ares"],
+     "correct_answer": "B: Apollo"},
+    {"question": "The Louvre Museum is located in which city?",
+     "options": ["A: Rome", "B: Madrid", "C: Paris", "D: London"],
+     "correct_answer": "C: Paris"},
+    {"question": "Which famous artist cut off his own ear?",
+     "options": ["A: Pablo Picasso", "B: Vincent Van Gogh", "C: Claude Monet", "D: Leonardo da Vinci"],
+     "correct_answer": "B: Vincent Van Gogh"},
+    {"question": "In which country is the ancient city of Petra located?",
+     "options": ["A: Jordan", "B: Egypt", "C: Israel", "D: Syria"],
+     "correct_answer": "A: Jordan"},
+    {"question": "The Sistine Chapel ceiling was painted by which artist?",
+     "options": ["A: Leonardo da Vinci", "B: Michelangelo", "C: Raphael", "D: Donatello"],
+     "correct_answer": "B: Michelangelo"},
+    {"question": "Shakespeare's Hamlet is the prince of which country?",
+     "options": ["A: Denmark", "B: England", "C: Scotland", "D: Norway"],
+     "correct_answer": "A: Denmark"},
+    {"question": "What musical period is Ludwig van Beethoven associated with?",
+     "options": ["A: Baroque", "B: Classical", "C: Romantic", "D: Renaissance"],
+     "correct_answer": "C: Romantic"},
+    {"question": "Which novel is the famous line 'It was the best of times, it was the worst of times' from?",
+     "options": ["A: War and Peace", "B: A Tale of Two Cities", "C: Great Expectations", "D: Moby Dick"],
+     "correct_answer": "B: A Tale of Two Cities"}
+
 ]
+
+
+
 
 
 }
