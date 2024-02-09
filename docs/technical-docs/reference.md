@@ -22,80 +22,80 @@ nav_order: 4
 
 # Home Page Access index()
 
-## Route: /
+Route: /
 
-## Methods: GET
+Methods: GET
 
-## Purpose: 
+Purpose: 
 Serves the home page of the application. This function renders the base template, providing users with an entry point to the application, including navigation to login, register, or select topic.
 
 
 
 # User Registration  register()
 
-## Route: /register/
+Route: /register/
 
-## Methods: GET, POST
+Methods: GET, POST
 
-## Purpose: 
+Purpose: 
 This function handles user registration. It displays a registration form and processes the form data to create a new user account.
 
 # User Login login()
 
-## Route: /login/
+Route: /login/
 
-## Methods: GET, POST
+Methods: GET, POST
 
-## Purpose: 
+Purpose: 
 Manages the user login process. It retrieves and verifies the user's credentials against the database. If authentication is successful, it redirects the user to the select topic page; otherwise, it redirect back to the login page.
 
 # Logout logout()
 
-## Route: /logout/
+Route: /logout/
 
-## Methods: GET
+Methods: GET
 
-## Purpose:
+Purpose:
 Handles user logout. This function helps users to securely exit their account.
 
 
 # Select Quiz Topic select_topic()
 
-## Route: /select_topic/
+Route: /select_topic/
 
-## Methods: GET, POST
+Methods: GET, POST
 
-## Purpose: 
+Purpose: 
 Handles the user's topic selection. It stores the selected topic in the session for use in displaying relevant quiz questions.
 
 
 # Show Quiz Questions show_questions()
 
-## Route: /show_questions/
+Route: /show_questions/
 
-## Methods: GET
+Methods: GET
 
-## Purpose: 
+Purpose: 
 Displays quiz questions based on selected topic. It retrieves questions from a pre-defined dataset and renders them on the questions page.
 
 
 # Submit Quiz submit_quiz()
 
-## Route: /submit_quiz/
+Route: /submit_quiz/
 
-## Methods: POST
+Methods: POST
 
-## Purpose:
+Purpose:
 Processes the answers submitted by the user for a quiz, calculates the score based on correct answers, and displays the results along with correct answers for review.
 
 
 # Database Check check_db()
 
-## Route: /check_db/
+Route: /check_db/
 
-## Methods: GET
+Methods: GET
 
-## Purpose: 
+Purpose: 
 A utility route to verify database connectivity and functionality by listing all users in the database..
 
 
@@ -103,21 +103,21 @@ A utility route to verify database connectivity and functionality by listing all
 
 # Display Specific Score   score_page(score)
 
-## Route: /score/<int:score>
+Route: /score/<int:score>
 
-## Methods: GET
+Methods: GET
 
-## Purpose:
+Purpose:
 This route dynamically displays a specific score passed in the URL to the user. 
 
 
 # Show Cumulative Score show_score()
 
-## Route: /score
+Route: /score
 
-## Methods: GET
+Methods: GET
 
-## Purpose:
+Purpose:
 Designed for users to view their quiz score and total questions  after submitting a quiz. 
 
 
