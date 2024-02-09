@@ -1,4 +1,11 @@
-# [Peer review]
+
+---
+title: Peer Review
+parent: Team Evaluation
+nav_order: 3
+---
+
+# Peer review
 {: .no_toc }
 
 <details open markdown="block">
