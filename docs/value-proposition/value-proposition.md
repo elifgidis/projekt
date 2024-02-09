@@ -15,13 +15,13 @@ In traditional education, students often face delays in receiving feedback on qu
 
 ## Our solution
 
--Frequent Knowledge Checks: To encourage active learning, our app allows students to take quick quizzes regularly to assess their understanding of the material.
+- Frequent Knowledge Checks: To encourage active learning, our app allows students to take quick quizzes regularly to assess their understanding of the material.
 
--Quick Feedback After Quizzes: Unlike traditional settings where feedback can take time, our app provides immediate results and explanations after each quiz, enabling students to understand and correct mistakes promptly.
+- Quick Feedback After Quizzes: Unlike traditional settings where feedback can take time, our app provides immediate results and explanations after each quiz, enabling students to understand and correct mistakes promptly.
 
--Learning for Busy Students: Designed with the modern student's schedule in mind, our app facilitates learning in short, manageable sessions that can fit into any part of the day.
+- Learning for Busy Students: Designed with the modern student's schedule in mind, our app facilitates learning in short, manageable sessions that can fit into any part of the day.
 
--Focused Study Sessions: By offering quizzes on specific topics, our app helps students concentrate on areas where they need improvement, making study sessions more efficient and effective.
+- Focused Study Sessions: By offering quizzes on specific topics, our app helps students concentrate on areas where they need improvement, making study sessions more efficient and effective.
 
 ## Target user 
 Our primary target users are students who are seeking flexible and efficient ways to study amidst their busy schedules. This includes high school, and university students, as well as lifelong learners who want to continuously improve their knowledge in a specific subject area but are constrained by time.
