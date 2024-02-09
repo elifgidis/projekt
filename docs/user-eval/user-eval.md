@@ -34,15 +34,15 @@ I involved friends and family in the testing phase and asked them to use the app
 ### Results
 Our feedback collection strategy provided valuable insights:
 
--Friends and family reported that the registration process took less than 10 seconds, a significant improvement over previous measurements.
--Feedback revealed users appreciating the depth and variety of questions.
--Minor technical glitches were reported, but these did not significantly hinder the overall app experience and were fixed.
+- Friends and family reported that the registration process took less than 10 seconds, a significant improvement over previous measurements.
+- Feedback revealed users appreciating the depth and variety of questions.
+- Minor technical glitches were reported, but these did not significantly hinder the overall app experience and were fixed.
 
 ### Implications
 Feedback from this evaluation led to several actionable insights:
 
--I redesigned the navigation flow of the app, and we decided to make key features such as test results easily accessible.
--The positive reception of the history and literature tests motivated me to expand our database of questions in these areas.
+- I redesigned the navigation flow of the app, and we decided to make key features such as test results easily accessible.
+- The positive reception of the history and literature tests motivated me to expand our database of questions in these areas.
 -I improved the stability and performance of the app by prioritizing fixing minor technical glitches reported.
 
 
