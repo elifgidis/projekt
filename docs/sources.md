@@ -5,9 +5,6 @@
 - https://app.datacamp.com/learn/courses/intermediate-python
 - https://app.datacamp.com/learn/courses/intro-to-python-for-data-science
 
-###
-###
-
     
 - https://realpython.com/python-quiz-application/
 - https://medium.com/@adityachandavale/creating-a-quiz-using-flask-wtf-1875884941ae
