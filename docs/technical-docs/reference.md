@@ -5,17 +5,12 @@ nav_order: 4
 ---
 
 {: .label }
-[Jane Dane]
+[Elif Gidis]
 
 # [Reference documentation]
 {: .no_toc }
 
-{: .attention }
-> This page collects internal functions, routes with their functions, and APIs (if any).
-> 
-> See [Uber](https://developer.uber.com/docs/drivers/references/api) or [PayPal](https://developer.paypal.com/api/rest/) for exemplary high-quality API reference documentation.
->
-> You may delete this `attention` box.
+
 
 <details open markdown="block">
 {: .text-delta }
@@ -24,62 +19,127 @@ nav_order: 4
 {: toc }
 </details>
 
-## [Section / module]
 
-### `function_definition()`
+# Home Page Access index()
 
-**Route:** `/route/`
+## Route: /
 
-**Methods:** `POST` `GET` `PATCH` `PUT` `DELETE`
+## Methods: GET
 
-**Purpose:** [Short explanation of what the function does and why]
+## Purpose: 
+Serves the home page of the application. This function renders the base template, providing users with an entry point to the application, including navigation to login, register, or select topic.
 
-**Sample output:**
 
-[Show an image, string output, or similar illustration -- or write NONE if function generates no output]
 
----
+# User Registration  register()
 
-## [Example, delete this section] Show to-do lists
+## Route: /register/
 
-### `get_lists()`
+## Methods: GET, POST
 
-**Route:** `/lists/`
+## Purpose: 
+This function handles user registration. It displays a registration form and processes the form data to create a new user account.
 
-**Methods:** `GET`
+# User Login login()
 
-**Purpose:** Show all to-do lists.
+## Route: /login/
 
-**Sample output:**
+## Methods: GET, POST
 
-![get_lists() sample](../assets/images/fswd-intro_00.png)
+## Purpose: 
+Manages the user login process. It retrieves and verifies the user's credentials against the database. If authentication is successful, it redirects the user to the select topic page; otherwise, it redirect back to the login page.
 
----
+# Logout logout()
 
-### `get_list_todos(list_id)`
+## Route: /logout/
 
-**Route:** `/lists/<int:list_id>`
+## Methods: GET
 
-**Methods:** `GET`
+## Purpose:
+Handles user logout. This function helps users to securely exit their account.
 
-**Purpose:** Retrieve all to-do items of to-do list with ID `list_id` from database and present to user.
 
-**Sample output:**
+# Select Quiz Topic select_topic()
 
-![get_list_todos() sample](../assets/images/fswd-intro_02.png)
+## Route: /select_topic/
 
----
+## Methods: GET, POST
 
-## [Example, delete this section] Insert sample data
+## Purpose: 
+Handles the user's topic selection. It stores the selected topic in the session for use in displaying relevant quiz questions.
 
-### `run_insert_sample()`
 
-**Route:** `/insert/sample`
+# Show Quiz Questions show_questions()
 
-**Methods:** `GET`
+## Route: /show_questions/
 
-**Purpose:** Flush the database and insert sample data set
+## Methods: GET
 
-**Sample output:**
+## Purpose: 
+Displays quiz questions based on selected topic. It retrieves questions from a pre-defined dataset and renders them on the questions page.
 
-Browser shows: `Database flushed and populated with some sample data.`
+
+# Submit Quiz submit_quiz()
+
+## Route: /submit_quiz/
+
+## Methods: POST
+
+## Purpose:
+Processes the answers submitted by the user for a quiz, calculates the score based on correct answers, and displays the results along with correct answers for review.
+
+
+# Database Check check_db()
+
+## Route: /check_db/
+
+## Methods: GET
+
+## Purpose: 
+A utility route to verify database connectivity and functionality by listing all users in the database..
+
+
+
+
+# Display Specific Score   score_page(score)
+
+## Route: /score/<int:score>
+
+## Methods: GET
+
+## Purpose:
+This route dynamically displays a specific score passed in the URL to the user. 
+
+
+# Show Cumulative Score show_score()
+
+## Route: /score
+
+## Methods: GET
+
+## Purpose:
+Designed for users to view their quiz score and total questions  after submitting a quiz. 
+
+
+
+
+![image](https://github.com/elifgidis/projekt/assets/154848427/3debfb75-e5fb-48ee-9b56-78859a80f086)
+![image](https://github.com/elifgidis/projekt/assets/154848427/44533ff9-0d7e-4a19-abcd-0694f5f29d7d)
+![image](https://github.com/elifgidis/projekt/assets/154848427/efabb914-1eeb-4397-b455-cea445a72070)
+![image](https://github.com/elifgidis/projekt/assets/154848427/534454ea-7124-40d4-9c0e-b34fdeb09330)
+![image](https://github.com/elifgidis/projekt/assets/154848427/523b935e-8bf3-42b2-a4da-739a3b84f7fb)
+![image](https://github.com/elifgidis/projekt/assets/154848427/38c16c21-581e-4e2c-b595-ed58d7924a65)
+![image](https://github.com/elifgidis/projekt/assets/154848427/a7b3565b-bf17-439a-b0e7-b48a6d563b6a)
+
+
+
+
+
+
+
+
+
+
+
+
+
