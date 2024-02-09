@@ -5,14 +5,11 @@
 Quiz App Project
 
 
+### Elif Gidis
 
-### [Elif Gidis]
+About: 23 Jahre alt und studiert Wirtschaftsinformatik an der HWR-Berlin
 
-About
-: 23 Jahre alt und studiert Wirtschaftsinformatik an der HWR-Berlin
-
-Matr.-Nr.
-: 77211914467
+Matr.-Nr. : 77211914467
 
 
 ## Eidesstattliche Erklärung
