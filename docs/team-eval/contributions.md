@@ -1,32 +1,7 @@
----
-title: Contributions
-parent: Team Evaluation
-nav_order: 4
----
+# Summary of individual contributions
 
-{: .label }
-[Jane Dane]
+## Elif Gidis
+Entire Project is made by Elif Gidis
 
-# [Summary of individual contributions]
-{: .no_toc }
 
-<details open markdown="block">
-{: .text-delta }
-<summary>Table of contents</summary>
-+ ToC
-{: toc }
-</details>
 
-## [Jane Dane]
-
-Contributions
-: Jane's first contribution
-: Jane's second contribution
-: ...
-
-## [Joe Doe]
-
-Contributions
-: Joe's first contribution
-: Joe's second contribution
-: ...
