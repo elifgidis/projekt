@@ -78,19 +78,15 @@ Pros: Comprehensive features, integrated with Django's ecosystem.
 Cons: Less flexibility for projects not using Django, steeper learning curve.
 
 ## 04: [Secure Authentication]
-### Meta
 Secure authentication mechanisms are employed to protect user accounts and personal information. E.g. CSRF tokens for jinja.
 
 ## 05: [Minimalistic Design]
-### Meta
 I chose a simple and effective design for the app's user interface. By adopting a minimalistic approach, the interface is kept clean and free from distractions. This decision is grounded not just in aesthetic preference but for usability.
 
 ## 06: [ Data Minimization Principle]
-### Meta
 In line with the principle of data minimization, the app collects only the necessary data required for its functionality, like email addresses for login.
 
 
 ## 07: [Modular Design for Scalability]
-### Meta
 Lastly, the app was conceived with a modular design, prioritizing future scalability and ease of maintenance. Following Flask modular structure to keep bug fixes & maintenance easier.
 
