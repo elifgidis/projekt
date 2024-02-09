@@ -4,7 +4,7 @@
 - [HWR Berlin - FSWD Course](https://hwrberlin.github.io/fswd/)
 - [Udemy - The Complete 2022 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - [DataCamp - Intermediate Python](https://app.datacamp.com/learn/courses/intermediate-python)
-- [DataCamp - Intro to Python for Data Science](https://app.datacamp.com/learn/courses/intro-to-python-for-data-science)
+- [DataCamp - Intro to Python](https://app.datacamp.com/learn/courses/intro-to-python-for-data-science)
 
 ## Quiz App Development with Flask
 - [Real Python - How to Build a Python Quiz Application](https://realpython.com/python-quiz-application/)
