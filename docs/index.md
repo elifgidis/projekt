@@ -1,10 +1,10 @@
 
 
-# [Quiz-ter]
+# Quiz-ter
 
-[Quiz App Project]
+Quiz App Project
 
-## Team members
+
 
 ### [Elif Gidis]
 
