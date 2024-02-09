@@ -119,13 +119,8 @@ def register():
 
     return render_template('register.html', form=form)
 
-# Route for the dashboard, requires login
-@app.route('/dashboard', methods=['GET', 'POST'])
-@login_required
-def dashboard():
-    return render_template('dashboard.html')
-# Route for logging out
 
+# Route for logging out
 @app.route('/logout', methods=['GET', 'POST'])
 @login_required
 def logout():
@@ -191,27 +186,18 @@ def submit_quiz():
 
 @app.route('/score/<int:score>')
 def score_page(score):
+    '''
+    Dynamically computes Score for the User
+    '''
     return render_template('score.html', score=score)
 
 @app.route('/check_db')
 def check_db():
     '''
-    Vanilla fucntion to check if the DB is functional.
+    Vanilla function to check if the DB is functional.
     '''
     users = User.query.all()
     return render_template('check_db.html', users=users)
-
-@app.route('/score', methods=['GET'])
-@login_required
-def show_score():
-    # Assuming 'score' and 'total_questions' are stored in the session after quiz submission
-    score = session.get('score', 0)
-    total_questions = session.get('total_questions', 0)
-    # Clear score information to start fresh on the next quiz attempt
-    session.pop('score', None)
-    session.pop('total_questions', None)
-    return render_template('score.html', score=score, total_questions=total_questions)
-
 
 if __name__ == '__main__':
     with app.app_context():
