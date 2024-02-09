@@ -3,9 +3,6 @@ title: User Evaluation
 nav_order: 4
 ---
 
-{: .label }
-[Jane Dane]
-
 # [User evaluation]
 {: .no_toc }
 
@@ -21,25 +18,33 @@ nav_order: 4
 ### Meta
 
 Status
-: **Work in progress** - Done - Obsolete
+: **Done**
 
 Updated
-: DD-MMM-YYYY
+: 09.02.2024
 
 ### Goal
 
-[Describe the goal of this evaluation, for example as a research question like: "How long does it take to register a new account and what is the drop-out rate?"]
+The primary goal is to provide users with a seamless learning experience, enabling them to enhance their knowledge over time efficiently and enjoyably. 
 
 ### Method
-
-[Describe how you proceed to achieve your evaluation goal. Be as specific as possible: others should be able to replicate your evaluation by following the description on this section.]
+To achieve our goal, we have taken a personal approach to collecting feedback:
+I involved friends and family in the testing phase and asked them to use the app a few times to gather real feedback on usability, content and appeal.
 
 ### Results
+Our feedback collection strategy provided valuable insights:
 
-[Present the main results of your evaluation, for example: "On average, users need 3 min to register. The drop-out rate was 70%. Users that didn't complete provided the following reasons: ..."]
+-Friends and family reported that the registration process took less than 30 seconds, a significant improvement over previous measurements.
+-Feedback revealed higher levels of engagement with tests related to history and general culture, with users appreciating the depth and variety of questions.
+-Minor technical glitches were reported, but these did not significantly hinder the overall app experience.
 
 ### Implications
+Feedback from this evaluation led to several actionable insights:
 
-[What did you learn from this evaluation and what will you change to improve? Example: "We aim to decrease the drop-out rate by not asking for a birth date. We will re-run this evaluation to measure the impact."]
+-I redesigned the navigation flow of the app, and we decided to make key features such as test results easily accessible.
+-The positive reception of the history and literature tests motivated me to expand our database of questions in these areas.
+-I improved the stability and performance of the app by prioritizing fixing minor technical glitches reported
 
----
+
+
+
