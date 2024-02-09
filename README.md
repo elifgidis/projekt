@@ -4,17 +4,17 @@ The Quiz-ter helps users to challenge themselves and test their knowledge on dif
 
 
 ## Features
-User Authentication: register, log in, and log out functionalities
-Multiple Quiz Topics: A range of topics for users to choose from
-Immediate Feedback: Instant feedback on each question helps users learn and improve
-Score Summary: Summary provided at the end of each quiz session.
+- User Authentication: register, log in, and log out functionalities
+- Multiple Quiz Topics: A range of topics for users to choose from
+- Immediate Feedback: Instant feedback on each question helps users learn and improve
+- Score Summary: Summary provided at the end of each quiz session.
 
 
 ## Technologies Used
-Frontend: HTML, CSS ,Bootstrap
-Backend: Flask (Python)
-Database: SQLite
-Responsive design for desktop and mobile users.
+- Frontend: HTML, CSS ,Bootstrap
+- Backend: Flask (Python)
+- Database: SQLite
+- Responsive design for desktop and mobile users.
 
 
 
