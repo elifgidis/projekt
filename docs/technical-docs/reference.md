@@ -109,14 +109,6 @@ Purpose:
 This route dynamically displays a specific score passed in the URL to the user. 
 
 
-# Show Cumulative Score show_score()
-
-Route: /score
-
-Methods: GET
-
-Purpose:
-Designed for users to view their quiz score and total questions  after submitting a quiz. 
 
 
 
