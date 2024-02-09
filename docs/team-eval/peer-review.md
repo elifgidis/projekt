@@ -1,6 +1,12 @@
-
-[Peer review]
+# [Peer review]
 {: .no_toc }
+
+<details open markdown="block">
+{: .text-delta }
+<summary>Table of contents</summary>
++ ToC
+{: toc }
+</details>
 
 
 
