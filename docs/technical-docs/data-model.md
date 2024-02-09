@@ -4,9 +4,6 @@ parent: Technical Docs
 nav_order: 3
 ---
 
-{: .label }
-[Jane Dane]
-
 # [Data model]
 {: .no_toc }
 
@@ -15,4 +12,6 @@ nav_order: 3
 <summary>Table of contents</summary>
 + ToC
 {: toc }
-</details>
+</details> 
+
+![image](https://github.com/elifgidis/projekt/assets/154848427/6aaf25fa-80d7-419c-b68b-f37a4ffd2baa)
